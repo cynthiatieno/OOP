@@ -1,0 +1,30 @@
+
+package userpass;
+import java.util.Scanner;
+public class userpass {
+    public static void main(String[] args) {
+        String correctpassword = "*";
+        int guessedpassword;
+
+        Scanner user = new Scanner(System.in);
+
+        System.out.println("\t\tLogin!!!");
+        System.out.println("\t enter your username:");
+
+        for(int i = 1; i <= 3; i++) {
+        System.out.println("Enter password:");
+        guessedpassword = user.nextInt();
+       if(guessedpassword == correctpassword) {
+            System.out.println("Correct password!!you are now logged in");
+            break;
+        }
+        else {
+            System.out.println("3 attempts remaining.");
+             System.out.println("This is your trial...:"+i);
+        }
+
+    }
+    }
+
+}
+
